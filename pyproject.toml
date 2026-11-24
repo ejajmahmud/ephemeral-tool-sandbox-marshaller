@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ephemeral-tool-sandbox-marshaller"
+version = "0.1.0"
+description = "Marshals tool parameters into isolated micro-environments with strict memory and time bounds"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Ejaj Mahmud", email = "dev@ejajmahmud.com"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = []
+
+[project.scripts]
+ephemeral-tool-sandbox-marshaller = "ephemeral_tool_sandbox_marshaller.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["ephemeral_tool_sandbox_marshaller*"]
